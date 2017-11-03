@@ -1,37 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.83">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px 'Songti SC'; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 12.0px 'Songti SC'; font-kerning: none}
-    span.s3 {font: 12.0px Times; font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;meta character=‘utf-8’&gt;</span></p>
-<p class="p1"><span class="s1">&lt;title&gt;</span><span class="s2">赵伟的</span><span class="s1">&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">&lt;style&gt;</span></p>
-<p class="p1"><span class="s1">#box{</span></p>
-<p class="p1"><span class="s1">color:red;</span></p>
-<p class="p1"><span class="s1">width:100px;</span></p>
-<p class="p1"><span class="s1">height:100px;</span></p>
-<p class="p1"><span class="s1">}</span></p>
-<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;div id=“box”&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-<p class="p2"><span class="s3">&lt;p&gt;</span><span class="s1">我是小六，妈的还有谁</span><span class="s3">&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#div1{
+				width: 256px;
+				height: 64px;
+				margin: 200px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			#div1 ul{
+				list-style: none;
+				position: absolute;
+			}
+			#div1 ul li{
+				width: 64px;
+				height: 64px;
+				float: left;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var div1=document.getElementById('div1');
+			    var ul=div1.getElementsByTagName('ul')[0];
+			    var li=ul.getElementsByTagName('li');
+			    ul.innerHTML=ul.innerHTML+ul.innerHTML;
+			    ul.style.width=li[0].offsetWidth*li.length+'px';
+			    var time=null;
+			    time=setInterval(function(){
+			    	    if (ul.offsetLeft<-ul.offsetWidth/2) {
+			    	        ul.style.left='0';
+			        }
+			        ul.style.left=ul.offsetLeft-2+'px';
+			    },20)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			<ul>
+				<li><img src="img/twitter.png"/></li>
+				<li><img src="img/twitter.png"/></li>
+				<li><img src="img/twitter.png"/></li>
+				<li><img src="img/twitter.png"/></li>
+			</ul>
+		</div>
+	</body>
 </html>
