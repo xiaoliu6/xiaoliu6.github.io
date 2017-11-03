@@ -2,54 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
-		<style>
-			*{
-				margin: 0px;
-				padding: 0px;
-			}
-			#div1{
-				width: 256px;
-				height: 64px;
-				margin: 200px auto;
-				overflow: hidden;
-				position: relative;
-			}
-			#div1 ul{
-				list-style: none;
-				position: absolute;
-			}
-			#div1 ul li{
-				width: 64px;
-				height: 64px;
-				float: left;
-			}
-		</style>
-		<script>
-			window.onload=function(){
-				var div1=document.getElementById('div1');
-			    var ul=div1.getElementsByTagName('ul')[0];
-			    var li=ul.getElementsByTagName('li');
-			    ul.innerHTML=ul.innerHTML+ul.innerHTML;
-			    ul.style.width=li[0].offsetWidth*li.length+'px';
-			    var time=null;
-			    time=setInterval(function(){
-			    	    if (ul.offsetLeft<-ul.offsetWidth/2) {
-			    	        ul.style.left='0';
-			        }
-			        ul.style.left=ul.offsetLeft-2+'px';
-			    },20)
-			}
-		</script>
+		<title>hello</title>
 	</head>
 	<body>
-		<div id="div1">
-			<ul>
-				<li><img src="img/twitter.png"/></li>
-				<li><img src="img/twitter.png"/></li>
-				<li><img src="img/twitter.png"/></li>
-				<li><img src="img/twitter.png"/></li>
-			</ul>
-		</div>
+		<p><span>1.123</span></p>
+		<button>123</button>
 	</body>
 </html>
